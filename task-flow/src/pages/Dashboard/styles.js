@@ -6,6 +6,12 @@ display: flex;
 flex-direction: column;
 padding: 50px 38px;
 text-align: center;
+
+.logout {
+    margin-left: 38px;
+    color: var(--orange);
+    cursor: pointer;
+}
 `;
 
 export const InputContainer = styled.form`
