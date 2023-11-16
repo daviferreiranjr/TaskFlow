@@ -20,7 +20,7 @@ export const Card = ({ title, description, date, onClick}) => {
                 <FiCalendar/> {formattedDate}
             </time>
             <p>{description}</p>
-            <button onClick={onClick}>Exluir</button>
+            <button onClick={onClick}>Excluir</button>
         </Container>
     )
 }
