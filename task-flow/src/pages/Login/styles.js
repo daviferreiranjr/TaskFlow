@@ -14,6 +14,12 @@ justify-content: center;
 width: 100%;
 height: 100%;
 
+@media only screen and (max-width: 600px) {
+  img {
+    display: none;
+  }
+}
+
 form {
     margin: 80px;
     width: 340px;
@@ -33,6 +39,11 @@ form {
     a {
         font-weight: bold;
         color: var(--orange);
+    }
+
+    .icon-home {
+        color: var(--orange);
+        cursor: pointer;
     }
 }
 `;

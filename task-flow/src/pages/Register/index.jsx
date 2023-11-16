@@ -3,6 +3,7 @@ import SignImage from '../../assets/taskFlow.avif'
 import { Input } from "../../components/Input"
 import { Link, useNavigate } from  'react-router-dom'
 import { FiUser, FiLock } from 'react-icons/fi'
+import { FaHome } from "react-icons/fa";
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -19,6 +20,10 @@ const handleNavigateLogin = () => {
 
 const handleNavigateDashboard = () => {
   navigate('/dashboard');
+};
+
+const handleNavigateHome = () => {
+  navigate('/');
 };
 
  const schema = yup.object().shape({
@@ -54,6 +59,7 @@ const handleNavigateDashboard = () => {
       <Content>
         <img src={SignImage} alt="imageTaskFlow" />
         <form onSubmit={handleSubmit(onSubmitFunction)}>
+        <FaHome onClick={handleNavigateHome} className="icon-home"/>
                 <h1>Cadastro</h1>
                 <Input register={register} name='username' error={errors.username?.message} icon={FiUser} label='Usuário' placeholder= 'Seu nome de usuário aqui'/>
                 <Input register={register} name='name' error={errors.name?.message} icon={FiUser} label='Nome' placeholder= 'Seu nome completo'/>

@@ -27,6 +27,23 @@ section {
         margin: 0;
         align-self: center;
     }
+
+    @media only screen and (max-width: 600px) {
+    flex-direction: column;
+
+    > div {
+        max-width: 100%;
+        flex: 1;
+        margin-right: 16px;
+        margin: 0;
+
+    }
+    
+    button{
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}
 }
 `
 
